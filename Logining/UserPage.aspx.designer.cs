@@ -42,6 +42,15 @@ namespace Logining
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
+        /// img элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img;
+
+        /// <summary>
         /// Button1 элемент управления.
         /// </summary>
         /// <remarks>

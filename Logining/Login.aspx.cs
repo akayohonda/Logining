@@ -18,17 +18,21 @@ namespace Logining
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string password = SignGen.GetSign(Textbox2.Text + "key");
+            
+            string signStr = SignGen.GetSign(Textbox1.Text + "key");
+
             Dictionary<string, string> db = LoginLogic.GetDict();
-            if (!db.ContainsKey(Textbox1.Text) && !db.ContainsKey(Textbox2.Text))
+            if (!db.ContainsKey(Textbox1.Text) && !db.ContainsKey(password))
                 Response.Redirect("InvalidLogin.aspx");
 
             foreach (var pair in db)
             {
-                if (Textbox1.Text == pair.Key && Textbox2.Text == pair.Value)
+                if (Textbox1.Text == pair.Key && password == pair.Value)
                 {
                     HttpCookie login = new HttpCookie("login", Textbox1.Text);
 
-                    HttpCookie sign = new HttpCookie("sign", SignGen.GetSign(Textbox2.Text + "key"));
+                    HttpCookie sign = new HttpCookie("sign", signStr);
 
                     Response.Cookies.Add(login);
 

@@ -1,0 +1,68 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#Table1 {
+    padding:10px;
+    height: 300px;
+    min-width: 250px;
+    border-radius: 5px;
+    border: solid gray 1px;
+    animation: moveFromBottom 1.5s ease-out;
+    animation-fill-mode: backwards;
+    transition: all 1s ease;
+}
+@keyframes moveFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.lbl {
+   margin-left:10px;
+   color: #202124;
+   font-size:20px;
+   font-weight:400;
+}
+.btn {
+    font-weight:400;
+    width:150px;
+    max-width: 200px;
+    padding: 8px 0;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 15px;
+    border: solid gray 1px;
+    animation-fill-mode: backwards;
+    transition: all 0.7s ease;
+}
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.text {
+    margin: 0 10px;
+    max-width: 130px;
+    padding: 2px 5px;
+    border: solid gray 1px;
+    border-radius: 5px;
+}
+#lbl {
+    color: brown;
+    font-size: 15px;
+    font-weight: 400;
+}
+#img{
+    width:300px;
+    margin:20px 50px;
+}

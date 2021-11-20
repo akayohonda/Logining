@@ -17,8 +17,12 @@ namespace Logining
 
             if (login != null && sign != null)
             {
-                if (sign.Value == SignGen.GetSign(login.Value + "key"))
+                if (sign.Value == SignGen.GetSign(login.Value + "key"))            
                     Label1.Text = login.Value;
+                if(login.Value == "Admin")
+                    img.ImageUrl = "~/img/audi.png";
+                else
+                    img.ImageUrl = "~/img/VAZ.png";
             }
             else
                 Response.Redirect("Login.aspx");

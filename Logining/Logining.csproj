@@ -71,12 +71,14 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
-    <Content Include="audi.png" />
+    <Content Include="img\audi.png" />
+    <Content Include="CSS\Style.css" />
     <Content Include="InvalidLogin.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="UserPage.aspx" />
+    <Content Include="img\VAZ.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +130,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
